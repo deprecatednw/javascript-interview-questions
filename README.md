@@ -50,9 +50,10 @@
 
 ```javascript
 (function test() {
-    console.log(
-        Function === Function.prototype.constructor
-    );
+	console.log(
+		Function === Function.constructor,
+		Function === Function.prototype.constructor
+	);
 })();
 ```
 
