@@ -12,6 +12,13 @@
 
 ```javascript
 (function test (arguments) {
-	console.log(arguments);
-})(2);
+	console.log(arguments[0]);
+})(100);
+```
+
+```javascript
+(function test () {
+    var arguments;
+	console.log(arguments[0]);
+})(200);
 ```
