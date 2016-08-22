@@ -4,7 +4,10 @@
 
 ```javascript
 (function test () {
-	console.log({}.constructor === arguments.constructor);
+	console.log(
+		{}.constructor === arguments.constructor,
+		[].constructor === arguments.constructor
+	);
 })();
 ```
 
@@ -54,7 +57,9 @@
 		Function === Object.constructor,
 		Function === Number.constructor,
 		Function === Function.constructor,
-		Function === Function.prototype.constructor
+		Function === Function.prototype.constructor,
+		Object === Object.prototype.constructor
+		Number === Number.prototype.constructor
 	);
 })();
 ```
@@ -72,17 +77,6 @@
 		typeof Function.prototype,
 		typeof String.prototype,
 		typeof RegExp.prototype
-	);
-})();
-```
-
-### 7. Explain the result of output:
-
-```javascript
-(function test() {
-	console.log(
-		Function.toString(),
-		Function.prototype.toString()
 	);
 })();
 ```
