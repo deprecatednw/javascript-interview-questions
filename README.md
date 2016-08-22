@@ -51,6 +51,8 @@
 ```javascript
 (function test() {
 	console.log(
+		Function === Object.constructor,
+		Function === Number.constructor,
 		Function === Function.constructor,
 		Function === Function.prototype.constructor
 	);
@@ -79,8 +81,8 @@
 ```javascript
 (function test() {
 	console.log(
-		Function.prototype.toString(),
-		Function.toString()
+		Function.toString(),
+		Function.prototype.toString()
 	);
 })();
 ```
