@@ -35,3 +35,23 @@
 	);
 })();
 ```
+
+### 4. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		function () {}.apply.length
+	);
+})();
+```
+
+### 5. Explain the result of output:
+
+```javascript
+(function test() {
+    console.log(
+        Function === Function.prototype.constructor
+    );
+})();
+```
