@@ -58,7 +58,7 @@
 		Function === Number.constructor,
 		Function === Function.constructor,
 		Function === Function.prototype.constructor,
-		Object === Object.prototype.constructor
+		Object === Object.prototype.constructor,
 		Number === Number.prototype.constructor
 	);
 })();
