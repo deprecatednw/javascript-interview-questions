@@ -73,3 +73,14 @@
 	);
 })();
 ```
+
+### 7. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		Function.prototype.toString(),
+		Function.toString()
+	);
+})();
+```
