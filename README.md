@@ -22,3 +22,16 @@
 	console.log(arguments[0]);
 })(200);
 ```
+
+### 3. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		function () {} instanceof Object,
+		function () {} instanceof Function,
+		Function instanceof Object,
+		Object instanceof Function
+	);
+})();
+```
