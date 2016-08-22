@@ -55,3 +55,20 @@
     );
 })();
 ```
+
+### 6. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		Object,
+		Function,
+		String,
+		RegExp,
+		typeof Object.prototype,
+		typeof Function.prototype,
+		typeof String.prototype,
+		typeof RegExp.prototype
+	);
+})();
+```
