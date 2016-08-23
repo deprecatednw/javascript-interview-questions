@@ -80,3 +80,30 @@
 	);
 })();
 ```
+
+### 7. Explain the result of output:
+
+```javascript
+(function () {
+	var fn = function () {
+		return this * 2;
+	};
+
+	console.log(fn.apply(undefined));
+	console.log(fn.apply(null));
+	console.log(fn.apply(1));
+})();
+```
+
+```javascript
+(function () {
+    'use strict';
+    var fn = function () {
+        return this * 2;
+    };
+
+    console.log(fn.apply(undefined));
+    console.log(fn.apply(null));
+    console.log(fn.apply(1));
+})();
+```
