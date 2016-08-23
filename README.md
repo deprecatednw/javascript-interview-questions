@@ -122,3 +122,15 @@
 	);
 })();
 ```
+
+### 9. Explain the result of output:
+
+```javascript
+(function test() {
+	var sum = function (a, b) {
+		return a + b;
+	};
+	console.log(typeof sum.call.apply);
+	console.log(sum.call.apply(null, [1, 2]));
+})();
+```
