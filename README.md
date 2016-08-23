@@ -84,7 +84,7 @@
 ### 7. Explain the result of output:
 
 ```javascript
-(function () {
+(function test() {
 	var fn = function () {
 		return this * 2;
 	};
@@ -96,14 +96,29 @@
 ```
 
 ```javascript
-(function () {
-    'use strict';
-    var fn = function () {
-        return this * 2;
-    };
+(function test() {
+	'use strict';
+	var fn = function () {
+		return this * 2;
+	};
 
-    console.log(fn.apply(undefined));
-    console.log(fn.apply(null));
-    console.log(fn.apply(1));
+	console.log(fn.apply(undefined));
+	console.log(fn.apply(null));
+	console.log(fn.apply(1));
+})();
+```
+
+### 8. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		Object.prototype.toString.call([]),
+		Object.prototype.toString.call({}),
+		Object.prototype.toString.call(Window),
+		(16).toString(16),
+		(true).toString(16),
+		(false).toString(16)
+	);
 })();
 ```
