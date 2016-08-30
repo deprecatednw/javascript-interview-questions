@@ -147,3 +147,11 @@
 	console.log(sum.call.apply(null, [1, 2]));
 })();
 ```
+
+### 10. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(void (p = 1 / ""), p);
+})();
+```
