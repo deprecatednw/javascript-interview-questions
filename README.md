@@ -195,3 +195,20 @@
 	console.log(typeof error !== 'undefined' && error.x);
 })();
 ```
+
+### 13. Explain the result of output:
+
+```javascript
+(function test() {
+	var a = [];
+
+	console.log(
+		a.length,
+		[,].length,
+		[, ,].length
+	);
+
+	a.length = -1;
+	console.log(a.length);
+})();
+```
