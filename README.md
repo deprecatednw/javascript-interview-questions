@@ -57,9 +57,12 @@
 		Function === Object.constructor,
 		Function === Number.constructor,
 		Function === Function.constructor,
+		Function === Window.constructor,
 		Function === Function.prototype.constructor,
 		Object === Object.prototype.constructor,
-		Number === Number.prototype.constructor
+		Number === Number.prototype.constructor,
+		Array === Array.prototype.constructor,
+		Window === Window.prototype.constructor
 	);
 })();
 ```
