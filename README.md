@@ -161,10 +161,10 @@
 ```javascript
 (function test() {
 	(function () {
-		test = 1;
-		var test = 2;
+		a = 1;
+		var a = 2;
 	})();
-	console.log(test());
+	console.log(a);
 })();
 ```
 
