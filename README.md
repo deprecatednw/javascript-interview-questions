@@ -181,3 +181,17 @@
 	console.log(a);
 })();
 ```
+
+### 12. Which a variant is preferable and why?
+
+```javascript
+(function test() {
+	console.log(error !== undefined && error.x);
+})();
+```
+
+```javascript
+(function test() {
+	console.log(typeof error !== 'undefined' && error.x);
+})();
+```
