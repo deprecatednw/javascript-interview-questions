@@ -72,14 +72,24 @@
 ```javascript
 (function test() {
 	console.log(
-		Object,
-		Function,
-		String,
-		RegExp,
 		typeof Object.prototype,
-		typeof Function.prototype,
 		typeof String.prototype,
-		typeof RegExp.prototype
+		typeof RegExp.prototype,
+		typeof Function.prototype
+	);
+})();
+```
+
+```javascript
+(function test() {
+	console.log(
+		typeof undefined,
+		typeof typeof undefined,
+		typeof null,
+		typeof 1 / null,
+		typeof [],
+		typeof {},
+		typeof document
 	);
 })();
 ```
