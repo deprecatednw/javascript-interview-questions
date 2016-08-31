@@ -212,3 +212,35 @@
 	console.log(a.length);
 })();
 ```
+
+### 14. Explain the result of output:
+
+```javascript
+(function test() {
+	(function () {
+		var a = b = 3;
+	})();
+
+	console.log(
+		typeof a,
+		typeof b
+	);
+})();
+```
+
+### 15. Explain the result of output:
+
+```javascript
+(function test() {
+	function fn() {
+		return
+		{
+			value: "test"
+		}
+	}
+
+	console.log(
+		typeof fn()
+	);
+})();
+```
