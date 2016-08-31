@@ -182,6 +182,19 @@
 })();
 ```
 
+```javascript
+(function test() {
+	(function () {
+		var a = b = 3;
+	})();
+
+	console.log(
+		typeof a,
+		typeof b
+	);
+})();
+```
+
 ### 12. Which a variant is preferable and why?
 
 ```javascript
@@ -217,13 +230,10 @@
 
 ```javascript
 (function test() {
-	(function () {
-		var a = b = 3;
-	})();
-
 	console.log(
-		typeof a,
-		typeof b
+		9 < 5 < 1,
+		2 < 6 < 1,
+		1 < 3 < 4
 	);
 })();
 ```
@@ -242,5 +252,40 @@
 	console.log(
 		typeof fn()
 	);
+})();
+```
+
+### 16. Explain the result of output:
+
+```javascript
+(function test() {
+	function sum(a, b) {
+		return a + b;
+	}
+
+	function sum(c) {
+		return c;
+	}
+
+	console.log(sum(3));
+	console.log(sum(2, 4));
+})();
+```
+
+### 17. Explain the result of output:
+
+```javascript
+(function test() {
+	a = 1;
+	window.b = 2;
+	this.c = 3;
+	var d = 4;
+
+	delete a;
+	delete b;
+	delete c;
+	delete d;
+
+	console.log(typeof a, typeof b, typeof c, typeof d);
 })();
 ```
