@@ -26,6 +26,20 @@
 })(200);
 ```
 
+```javascript
+(function test() {
+	function sum() {
+		var sum = 0, i;
+		for (i in arguments) {
+			sum += i;
+		}
+		return sum;
+	}
+
+	console.log(sum(10, 20, 30, 40, 50));
+})();
+```
+
 ### 3. Explain the result of output:
 
 ```javascript
