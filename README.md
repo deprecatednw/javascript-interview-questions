@@ -320,3 +320,16 @@
 	console.log('Hello!');
 })();
 ```
+
+### 19. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		[] - [],
+		[] + [],
+		{} - {},
+		{} + {}
+	);
+})();
+```
