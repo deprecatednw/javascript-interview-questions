@@ -303,3 +303,20 @@
 	console.log(typeof a, typeof b, typeof c, typeof d);
 })();
 ```
+
+### 18. Explain the result of output:
+
+```javascript
+(function test() {
+	var a = 1;
+
+	setTimeout(function () {
+		a = 0;
+		console.log('Hi!');
+	}, 0);
+
+	while (a) {
+	}
+	console.log('Hello!');
+})();
+```
