@@ -333,3 +333,64 @@
 	);
 })();
 ```
+
+### 20. Explain the result of output:
+
+```javascript
+(function test() {
+	var holder = {value: 1},
+		holder2 = holder;
+
+	holder.result = holder = {value: 0};
+
+	console.log(
+		holder.result,
+		holder2
+	);
+})();
+```
+
+### 21. Explain the result of output:
+
+```javascript
+(function test() {
+	var test = {
+		property: 'Value',
+
+		getPropertyValue: function () {
+			return this.property;
+		}
+	};
+
+	var getPropertyValue = test.getPropertyValue;
+
+	console.log(
+		getPropertyValue(),
+		test.getPropertyValue()
+	);
+})();
+```
+
+### 22. What is the maximum depth of the stack, starting with the "test" function?
+
+```javascript
+var a = [1, 2, 3, 4, 5];
+
+(function test() {
+    console.log((new Error()).stack);
+
+    var item = a.pop();
+    item && setTimeout(arguments.callee, 0);
+})();
+```
+
+```javascript
+var a = [1, 2, 3, 4, 5];
+
+(function test() {
+    console.log((new Error()).stack);
+
+    var item = a.pop();
+    item && arguments.callee();
+})();
+```
