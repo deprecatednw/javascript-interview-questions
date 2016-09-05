@@ -532,3 +532,45 @@ console.log(
 	true === '2'
 );
 ```
+
+### 27. Explain the result of output:
+
+```javascript
+(function () {
+    var fn = function () {
+        console.log(typeof this);
+    };
+    fn.call("Hello World!");
+})();
+
+(function () {
+    "use strict";
+    var fn = function () {
+        console.log(typeof this);
+    };
+    fn.call("Hello World!");
+})();
+```
+
+```javascript
+console.log(
+	(function () {
+		return (new this).stack;
+	}).apply(Error)
+);
+```
+
+### 28. Explain the result of output:
+
+```javascript
+(function test() {
+	var a = {},
+		b = {value: 'test1'},
+		c = {value: 'test2'};
+
+	a[b] = 'test3';
+	a[c] = 'test4';
+
+	console.log(a[b]);
+})();
+```
