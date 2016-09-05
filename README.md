@@ -394,3 +394,100 @@ var a = [1, 2, 3, 4, 5];
     item && arguments.callee();
 })();
 ```
+
+### 23. Explain the result of output:
+
+```javascript
+(function test() {
+	function fn() {
+		arguments.callee.count = arguments.callee.count || 0;
+		return arguments.callee.count++;
+	}
+
+	console.log(
+		fn(),
+		fn(),
+		fn()
+	);
+})();
+```
+
+### 24. Explain the result of output:
+
+```javascript
+(function test() {
+	var a = '5', b = 2, c = a+++b;
+	console.log(c);
+})();
+```
+
+### 25. Explain the result of output:
+
+```javascript
+console.log(
+	016 * 2,
+	0x16 * 2
+);
+```
+
+```javascript
+console.log(
+	Math.floor(999.99) === ~~999.99,
+	Math.floor(-999.99) === ~~-999.99,
+	~function(){}(),
+	~~function(){}(),
+	~~null,
+	~~undefined,
+	~~[],
+	~~{},
+	~~'Test'
+);
+```
+
+```javascript
+console.log(
+	1 + "2" + "2",
+	1 + +"2" + "2",
+	1 + -"1" + "2",
+	+"1" + "1" + "2",
+	"2" * 3,
+	"6" / 2,
+	"A" - "B" + "2",
+	"A" - "B" + 2
+);
+```
+
+```javascript
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 === 0.3);
+console.log(
+	(0.1 + 0.2) + 0.3 === 0.1 + (0.2 + 0.3)
+);
+```
+
+```javascript
+console.log(
+	Number('Test!'),
+	Number(''),
+	Number('00010'),
+	Number(true),
+	Number(NaN),
+	parseInt('2', 2),
+	parseInt('011', 8),
+	parseInt('011', 10),
+	parseInt('00C', 16),
+	parseInt([10, 9, 8, 7, 6, 5, 4, 3, 2, 1]),
+	1 / -0,
+	isNaN(1 / -0),
+	isFinite(1 / -0),
+	0 / -0,
+	isNaN(0 / -0),
+	isFinite(0 / -0),
+	1 / 0,
+	isNaN(1 / 0),
+	isFinite(1 / 0),
+	0 / 0,
+	isNaN(0 / 0),
+	isFinite(0 / 0)
+);
+```
