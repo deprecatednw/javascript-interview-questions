@@ -108,6 +108,18 @@
 })();
 ```
 
+```javascript
+(function test() {
+	console.log(
+		typeof Infinity,
+		typeof NaN,
+		typeof {null: null}.null,
+		typeof {NaN: NaN}.NaN,
+		typeof {Infinity: Infinity}.Infinity
+	);
+})();
+```
+
 ### 7. Explain the result of output:
 
 ```javascript
@@ -488,6 +500,35 @@ console.log(
 	isFinite(1 / 0),
 	0 / 0,
 	isNaN(0 / 0),
-	isFinite(0 / 0)
+	isFinite(0 / 0),
+	NaN === NaN,
+	Infinity === Infinity
+);
+```
+
+### 26. Explain the result of output:
+
+```javascript
+console.log(true == [1] && true == [2]);
+```
+
+```javascript
+console.log(
+	new Boolean() == true,
+	new Boolean("") == true,
+	new Boolean("0") == true,
+	new Boolean("1") == true,
+	new Boolean("true") == true
+);
+```
+
+```javascript
+console.log(
+	false == '0',
+	false === '0',
+	true == '1',
+	true === '1',
+	true == '2',
+	true === '2'
 );
 ```
