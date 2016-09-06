@@ -638,3 +638,59 @@ console.log(typeof confirm('Do you like JavaScript?'));
 5. rejected  
 6. interrupted
   
+### 32. Explain the result of output:
+
+```javascript
+(function test() {
+	console.log(
+		[1, 2, 3, 4, 5].map(function (n) {
+			return n === 1 && 1 || arguments.callee(n - 1) * n;
+		})
+	);
+})();
+```
+
+```javascript
+(function test() {
+	"use strict";
+	console.log(
+		[1, 2, 3, 4, 5].map(function (n) {
+			return n === 1 && 1 || arguments.callee(n - 1) * n;
+		})
+	);
+})();
+```
+
+### 33. Explain the result of output:
+
+```javascript
+(function test() {
+	var s1 = 'test',
+		s2 = new String('test'),
+		s3 = String('test');
+
+	console.log(
+		s1 == s2,
+		s1 === s2,
+		s1 == s3,
+		s1 === s3,
+		s1.constructor === s2.constructor,
+		s1.constructor === s3.constructor,
+		typeof s1,
+		typeof s2,
+		typeof s3
+	);
+
+	console.log(
+		s1.slice() == s1,
+		s1.slice() == s2,
+		s1.slice() == s3,
+		s1.slice() === s1,
+		s1.slice() === s2,
+		s1.slice() === s3
+	);
+
+	s1[2] = 'w';
+	console.log(s1);
+})();
+```
