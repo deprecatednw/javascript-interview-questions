@@ -252,6 +252,24 @@
 })();
 ```
 
+```javascript
+(function test() {
+	var a = [1, 2, 3, 4, 5];
+	a.length = null;
+
+	console.log(a[4]);
+})();
+```
+
+```javascript
+(function test() {
+	var a = [1, 2, 3, 4, 5];
+	a.length = undefined;
+
+	console.log(a[4]);
+})();
+```
+
 ### 14. Explain the result of output:
 
 ```javascript
@@ -380,6 +398,23 @@
 		getPropertyValue(),
 		test.getPropertyValue()
 	);
+})();
+```
+
+```javascript
+(function test () {
+	"use strict";
+	
+	var holder, fn;
+	holder = {
+		holderFn: function () {
+			console.log(this);
+		}
+	};
+	fn = holder.holderFn;
+	
+	holder.holderFn();
+	fn();
 })();
 ```
 
@@ -574,3 +609,32 @@ console.log(
 	console.log(a[b]);
 })();
 ```
+
+### 29. Explain the result of output:
+
+```javascript
+console.log(
+	Date(),
+	new Date,
+	+Date(),
+	+new Date,
+	+new Date(),
+	+new Date() === +new Date
+);
+```
+
+### 30. Explain the result of output:
+
+```javascript
+console.log(typeof confirm('Do you like JavaScript?'));
+```
+
+### 31. Eliminate non-existent state of promise.
+
+1. fulfilled  
+2. awaiting  
+3. pending  
+4. refused  
+5. rejected  
+6. interrupted
+  
