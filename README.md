@@ -270,6 +270,22 @@
 })();
 ```
 
+```javascript
+(function test() {
+	var a = [[[1], 2], 3];
+
+	console.log(a.length);
+})();
+```
+
+```javascript
+(function test() {
+	console.log(
+	    [1,2,[3,4]] + [[5,6], 7, 8]
+	);
+})();
+```
+
 ### 14. Explain the result of output:
 
 ```javascript
