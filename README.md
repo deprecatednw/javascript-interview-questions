@@ -761,9 +761,6 @@ Object.defineProperty(this, "variable", {
 console.log(delete variable);
 ```
 
-### 37. Explain the result of output:
-
-```javascript
 ```javascript
 var a = 100;
 console.log(Object.getOwnPropertyDescriptor(this, "a"));
@@ -772,6 +769,8 @@ b = 200;
 console.log(Object.getOwnPropertyDescriptor(this, "b"));
 ```
 
+### 37. Explain the result of output:
+```javascript
 (function test() {
 	var Factory = function () {
 		var a = [];
