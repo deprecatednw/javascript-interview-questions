@@ -797,7 +797,7 @@ console.log(typeof confirm('Do you like JavaScript?'));
 
 ### 38. Explain the result of output when the page is fully loaded:
 
-```javascript
+```html
 <html>
     <head>
         <script>
@@ -809,6 +809,43 @@ console.log(typeof confirm('Do you like JavaScript?'));
         </script>
     </head>
     <body>
+    </body>
+</html>
+```
+
+### 39. Do you see pitfalls at the code?
+
+```html
+<html>
+    <body>
+        <script>
+              function nodeHouse(id) {
+                var node;
+                return {
+                  make: function () {
+                    node = document.createElement("div");
+                    node.setAttribute('id', id);
+                    document.body.appendChild(node);
+                    return this;
+                  },
+                  destroy: function () {
+                    document.body.removeChild(node);
+                    return this;
+                  },
+                  test: function () {
+                    return node.getAttribute('id') == id;
+                  }
+                };
+              }
+            
+              var nodesHouse = [],
+                      currentNodeHouse;
+            
+              for (var i = 0; i < 100000; i++) {
+                nodesHouse.push(currentNodeHouse = nodeHouse(i));
+                currentNodeHouse.make().destroy();
+              }
+        </script>
     </body>
 </html>
 ```
