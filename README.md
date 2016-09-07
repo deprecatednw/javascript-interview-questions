@@ -794,3 +794,21 @@ console.log(typeof confirm('Do you like JavaScript?'));
 	);
 })();
 ```
+
+### 38) Explain the result of output when the page is fully loaded.
+
+```javascript
+<html>
+    <head>
+        <script>
+            setTimeout(function () {
+                console.log(
+                        performance.now() > 5000
+                );
+            }, 10000);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
+```
