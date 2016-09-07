@@ -710,3 +710,80 @@ console.log(typeof confirm('Do you like JavaScript?'));
 	console.log(s1);
 })();
 ```
+
+### 34. Explain the result of output:
+
+```javascript
+(function test() {
+	var a = [1, 2, 3],
+		b = a.reverse(),
+		c = [4, 5, 6];
+
+	b.push(c);
+
+	console.log(a.length, b.length);
+	console.log(a.slice(-1));
+	console.log(b.slice(-1));
+})();
+```
+
+### 35. Explain the result of output:
+
+```javascript
+(function test() {
+	for (var i = 0; i < 5; i++) {
+		setTimeout(function () {
+			console.log(i);
+		}, 0)
+	}
+})();
+```
+
+### 36. Explain the result of output (the code is executed in a window scope):
+
+```javascript
+Object.defineProperty(this, "value", {
+    value: 100,
+    writable: false
+});
+
+value = 200;
+
+console.log(window.value, this.value, value);
+```
+
+```javascript
+Object.defineProperty(this, "variable", {
+	value: 100,
+	configurable: false
+});
+
+console.log(delete variable);
+```
+
+### 37. Explain the result of output:
+
+```javascript
+```javascript
+var a = 100;
+console.log(Object.getOwnPropertyDescriptor(this, "a"));
+
+b = 200;
+console.log(Object.getOwnPropertyDescriptor(this, "b"));
+```
+
+(function test() {
+	var Factory = function () {
+		var a = [];
+		a[Array.prototype.pop.apply(arguments)] = 1;
+		return a;
+	};
+
+	console.log(
+		Factory(0).length,
+		Factory(100).length,
+		Factory(Infinity).length,
+		Factory(NaN).length
+	);
+})();
+```
