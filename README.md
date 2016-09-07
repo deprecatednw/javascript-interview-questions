@@ -437,14 +437,16 @@
 ### 22. What is the maximum depth of the stack, starting with the "test" function?
 
 ```javascript
-var a = [1, 2, 3, 4, 5];
-
-(function test() {
-    console.log((new Error()).stack);
-
-    var item = a.pop();
-    item && setTimeout(arguments.callee, 0);
-})();
+<script>
+    var a = [1, 2, 3, 4, 5];
+    
+    (function test() {
+        console.log((new Error()).stack);
+    
+        var item = a.pop();
+        item && setTimeout(arguments.callee, 0);
+    })();
+</script>
 ```
 
 ```javascript
@@ -739,34 +741,40 @@ console.log(typeof confirm('Do you like JavaScript?'));
 })();
 ```
 
-### 36. Explain the result of output (the code is executed in a window scope):
+### 36. Explain the result of output:
 
 ```javascript
-Object.defineProperty(this, "value", {
-    value: 100,
-    writable: false
-});
-
-value = 200;
-
-console.log(window.value, this.value, value);
+<script>
+    Object.defineProperty(this, "value", {
+        value: 100,
+        writable: false
+    });
+    
+    value = 200;
+    
+    console.log(window.value, this.value, value);
+</script>
 ```
 
 ```javascript
-Object.defineProperty(this, "variable", {
-	value: 100,
-	configurable: false
-});
-
-console.log(delete variable);
+<script>
+    Object.defineProperty(this, "variable", {
+        value: 100,
+        configurable: false
+    });
+    
+    console.log(delete variable);
+</script>
 ```
 
 ```javascript
-var a = 100;
-console.log(Object.getOwnPropertyDescriptor(this, "a"));
-
-b = 200;
-console.log(Object.getOwnPropertyDescriptor(this, "b"));
+<script>
+    var a = 100;
+    console.log(Object.getOwnPropertyDescriptor(this, "a"));
+    
+    b = 200;
+    console.log(Object.getOwnPropertyDescriptor(this, "b"));
+</script>
 ```
 
 ### 37. Explain the result of output:
