@@ -795,7 +795,7 @@ console.log(typeof confirm('Do you like JavaScript?'));
 })();
 ```
 
-### 38) Explain the result of output when the page is fully loaded.
+### 38. Explain the result of output when the page is fully loaded.
 
 ```javascript
 <html>
