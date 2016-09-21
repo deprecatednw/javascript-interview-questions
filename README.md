@@ -778,6 +778,7 @@ console.log(typeof confirm('Do you like JavaScript?'));
 ```
 
 ### 37. Explain the result of output:
+
 ```javascript
 (function test() {
 	var Factory = function () {
@@ -848,4 +849,24 @@ console.log(typeof confirm('Do you like JavaScript?'));
         </script>
     </body>
 </html>
+```
+
+### 40. How can we prevent a memory leak?
+
+```javascript
+var Key = function (key) {
+	this.key = key;
+};
+
+var map = new Map();
+
+function addToMap() {
+	var currentKey = new Key(100);
+	map.set(currentKey, {});
+	currentKey = null;
+
+	setTimeout(addToMap);
+}
+
+setTimeout(addToMap);
 ```
