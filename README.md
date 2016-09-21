@@ -814,7 +814,7 @@ console.log(typeof confirm('Do you like JavaScript?'));
 </html>
 ```
 
-### 39. Do you see pitfalls at the code?
+### 39. Do you see the pitfalls in the code?
 
 ```html
 <html>
