@@ -893,3 +893,35 @@ setTimeout(addToMap);
 	);
 })();
 ```
+
+### 42. Explain the result of output:
+
+```javascript
+(function () {
+	var a = 1;
+	(new Function('a = 2'))();
+	console.log('a:', a)
+})();
+
+(function () {
+	var b = 3;
+	(new Function('b = 4')).call(this);
+	console.log('b:', b);
+})();
+
+(function () {
+	'use strict';
+
+	var c = 5;
+	(new Function('c = 6'))();
+	console.log('c:', c);
+})();
+
+(function () {
+	'use strict';
+
+	var d = 7;
+	(new Function('d = 8')).call(this);
+	console.log('d:', d);
+})();
+```
