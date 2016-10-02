@@ -925,3 +925,23 @@ setTimeout(addToMap);
 	console.log('d:', d);
 })();
 ```
+
+### 43. Explain the result of output:
+
+```javascript
+(function () {
+	console.log(
+		new Function('return this')() === undefined,
+		new Function('"use strict"; return this')() === undefined
+	);
+})();
+
+(function () {
+	'use strict';
+
+	console.log(
+		new Function('return this')() === undefined,
+		new Function('"use strict"; return this')() === undefined
+	);
+})();
+```
