@@ -870,3 +870,26 @@ function addToMap() {
 
 setTimeout(addToMap);
 ```
+
+### 41. Explain the result of output:
+
+```javascript
+(function () {
+	var dynamicCode = '(function () {return this}())';
+
+	console.log(
+		eval(dynamicCode),
+		eval.call(null, dynamicCode)
+	);
+})();
+
+(function () {
+	'use strict';
+	var dynamicCode = '(function () {return this}())';
+
+	console.log(
+		eval(dynamicCode),
+		eval.call(null, dynamicCode)
+	);
+})();
+```
