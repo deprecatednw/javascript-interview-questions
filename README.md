@@ -269,24 +269,29 @@
 ```javascript
 (function test() {
 	var a = [1, 2, 3, 4, 5];
-	var b = [1, 2, 3, 4, 5];
 	
 	a.length = null;
 	console.log(a[4]);
-    
-    b.length = undefined;
-    console.log(b[4]);
-    
-    console.log([[[1], 2], 3].length);
 })();
 ```
 
 **13.4**  
 ```javascript
 (function test() {
+	var b = [1, 2, 3, 4, 5];
+    
+    b.length = undefined;
+    console.log(b[4]);
+})();
+```
+
+**13.5**  
+```javascript
+(function test() {
     console.log(
         [1,2,[3,4]] + [[5,6], 7, 8]
     );
+    console.log([[[1], 2], 3].length);
 })();
 ```
 
