@@ -240,6 +240,17 @@
 ```javascript
 (function test() {
 	var a = [];
+	a[100] = undefined;
+	console.log(a.length);
+	
+	var b = new Array('100');
+	console.log(b.length);
+})();
+```
+
+```javascript
+(function test() {
+	var a = [];
 
 	console.log(
 		a.length,
