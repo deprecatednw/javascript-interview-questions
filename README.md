@@ -927,7 +927,7 @@ console.log('a2:', a)
 console.log('b2:', b);
 ```
 
-**42.3** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
+**42.3** [FUNCTION CONSTRUCTOR SCOPE, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
 ```javascript
 (function () {
 	'use strict';
@@ -952,7 +952,7 @@ console.log('c2:', c);
 console.log('c4:', c);
 ```
 
-**42.4** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
+**42.4** [FUNCTION CONSTRUCTOR SCOPE, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
 ```javascript
 (function () {
 	'use strict';
