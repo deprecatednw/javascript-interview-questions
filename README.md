@@ -963,6 +963,32 @@ setTimeout(addToMap);
 })();
 ```
 
+**43.3** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#The_Function_constructor)  
+```javascript
+(function () {
+	console.log(
+		new Function('return arguments[0]')()
+	);
+	console.log(
+		new Function('"use strict"; return arguments[0]')()
+	);
+})(123);
+```
+
+**43.4** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#The_Function_constructor)  
+```javascript
+(function () {
+	'use strict';
+	
+	console.log(
+		new Function('return arguments[0]')()
+	);
+	console.log(
+		new Function('"use strict"; return arguments[0]')()
+	);
+})(123);
+```
+
 ## 44. EXPLAIN THE RESULT OF OUTPUT:  
 
 **44.1** [FUNCTION DECLARATION, HOISTING](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)  
