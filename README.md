@@ -935,7 +935,7 @@ setTimeout(addToMap);
 })();
 ```
 
-### 43. Explain the result of output:
+### 43. Explain the result of output [FUNCTION CONSTRUCTOR, STRICT MODE]:
 
 **43.1**  
 ```javascript
@@ -956,5 +956,23 @@ setTimeout(addToMap);
 		new Function('return this')() === undefined,
 		new Function('"use strict"; return this')() === undefined
 	);
+})();
+```
+
+### 44. Explain the result of output [FUNCTION DECLARATION, HOISTING]:
+
+**44.1**  
+```javascript
+(function test() {
+    first();
+    second();
+
+    function first() {
+        console.log('First function is called!');
+    }
+
+    var second = function () {
+        console.log('Second function is called!');
+    }
 })();
 ```
