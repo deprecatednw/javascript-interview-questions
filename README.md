@@ -940,6 +940,18 @@ console.log('b2:', b);
 console.log('c2:', c);
 ```
 
+```javascript
+(function () {
+	'use strict';
+
+	var c = 5;
+	(new Function('"use strict"; c = 6'))();
+	console.log('c3:', c);
+})();
+
+console.log('c4:', c);
+```
+
 **42.4** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
 ```javascript
 (function () {
@@ -951,6 +963,18 @@ console.log('c2:', c);
 })();
 
 console.log('d2:', d);
+```
+
+```javascript
+(function () {
+	'use strict';
+
+	var d = 7;
+	(new Function('"use strict"; d = 8')).call(this);
+	console.log('d3:', d);
+})();
+
+console.log('d4:', d);
 ```
 
 ## 43. EXPLAIN THE RESULT OF OUTPUT:
