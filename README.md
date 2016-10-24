@@ -903,36 +903,54 @@ setTimeout(addToMap);
 })();
 ```
 
-### 42. Explain the result of output:
+## 42. EXPLAIN THE RESULT OF OUTPUT:
 
+**42.1** [FUNCTION SCOPE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
 ```javascript
 (function () {
 	var a = 1;
 	(new Function('a = 2'))();
-	console.log('a:', a)
+	console.log('a1:', a)
 })();
 
+console.log('a2:', a)
+```
+
+**42.2** [FUNCTION SCOPE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
+```javascript
 (function () {
 	var b = 3;
 	(new Function('b = 4')).call(this);
-	console.log('b:', b);
+	console.log('b1:', b);
 })();
 
+console.log('b2:', b);
+```
+
+**42.3** [FUNCTION SCOPE, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
+```javascript
 (function () {
 	'use strict';
 
 	var c = 5;
 	(new Function('c = 6'))();
-	console.log('c:', c);
+	console.log('c1:', c);
 })();
 
+console.log('c2:', c);
+```
+
+**42.4** [FUNCTION SCOPE, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#Function_constructor_vs._function_declaration_vs._function_expression)  
+```javascript
 (function () {
 	'use strict';
 
 	var d = 7;
 	(new Function('d = 8')).call(this);
-	console.log('d:', d);
+	console.log('d1:', d);
 })();
+
+console.log('d2:', d);
 ```
 
 ## 43. EXPLAIN THE RESULT OF OUTPUT:
