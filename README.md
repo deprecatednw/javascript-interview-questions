@@ -935,31 +935,35 @@ setTimeout(addToMap);
 })();
 ```
 
-### 43. Explain the result of output [FUNCTION CONSTRUCTOR, STRICT MODE]:
+## 43. EXPLAIN THE RESULT OF OUTPUT:
 
-**43.1**  
+**43.1** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#The_Function_constructor)  
 ```javascript
 (function () {
 	console.log(
-		new Function('return this')() === undefined,
-		new Function('"use strict"; return this')() === undefined
+		new Function('return this')()
+	);
+	console.log(
+		new Function('"use strict"; return this')()
 	);
 })();
 ```
 
-**43.2**  
+**43.2** [FUNCTION CONSTRUCTOR, STRICT MODE](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#The_Function_constructor)  
 ```javascript
 (function () {
 	'use strict';
 
 	console.log(
-		new Function('return this')() === undefined,
-		new Function('"use strict"; return this')() === undefined
+		new Function('return this')()
+	);
+	console.log(
+		new Function('"use strict"; return this')()
 	);
 })();
 ```
 
-### 44. Explain the result of output:  
+## 44. EXPLAIN THE RESULT OF OUTPUT:  
 
 **44.1** [FUNCTION DECLARATION, HOISTING](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)  
 ```javascript
