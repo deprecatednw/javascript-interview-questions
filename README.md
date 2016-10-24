@@ -959,20 +959,37 @@ setTimeout(addToMap);
 })();
 ```
 
-### 44. Explain the result of output [FUNCTION DECLARATION, HOISTING]:
+### 44. Explain the result of output:  
 
-**44.1**  
+**44.1** [FUNCTION DECLARATION, HOISTING](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)  
 ```javascript
 (function test() {
-    first();
-    second();
+    fn();
 
-    function first() {
-        console.log('First function is called!');
+    function fn () {
+        console.log('The function is called!');
     }
+})();
+```
 
-    var second = function () {
-        console.log('Second function is called!');
+**44.2** [FUNCTION EXPRESSION, HOISTING](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)  
+```javascript
+(function test() {
+    fn();
+
+    var fn = function () {
+        console.log('The function is called!');
+    }
+})();
+```
+
+**44.3** [FUNCTION EXPRESSION, HOISTING](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)  
+```javascript
+(function test() {
+    myFn();
+
+    var fn = function myFn() {
+        console.log('The myFn function is called!');
     }
 })();
 ```
