@@ -937,6 +937,7 @@ setTimeout(addToMap);
 
 ### 43. Explain the result of output:
 
+**43.1**  
 ```javascript
 (function () {
 	console.log(
@@ -944,7 +945,10 @@ setTimeout(addToMap);
 		new Function('"use strict"; return this')() === undefined
 	);
 })();
+```
 
+**43.2**  
+```javascript
 (function () {
 	'use strict';
 
