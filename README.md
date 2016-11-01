@@ -1074,3 +1074,8 @@ console.log('d4:', d);
 console.log(33.multiply(2));  // 66
 console.log(33.multiply(3));  // 99
 ```
+
+**45.3** IMPLEMENT THE "DUPLICATION" FUNCTION
+```javascript
+console.log('HELLO'.duplication());	// HELLOHELLO
+```
