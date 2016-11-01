@@ -1065,3 +1065,12 @@ console.log('d4:', d);
     }
 })();
 ```
+
+## 45. YOU MUST:
+
+**45.1** FIX THE INTERPRETATION MISTAKES IN PROGRAM
+**45.2** IMPLEMENT THE "MULTIPLY" FUNCTION
+```javascript
+console.log(33.multiply(2));  // 66
+console.log(33.multiply(3));  // 99
+```
