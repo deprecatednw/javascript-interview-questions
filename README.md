@@ -1078,3 +1078,12 @@ console.log((33).multiply(3));  // 99
 ```javascript
 console.log('HELLO'.duplication());	// HELLOHELLO
 ```
+
+## 46. EXPLAIN THE RESULT OF OUTPUT:
+
+**46.1** [COMMA OPERATOR](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)  
+```javascript
+console.log(
+	typeof (true, '1', 1)
+);
+```
