@@ -1066,16 +1066,15 @@ console.log('d4:', d);
 })();
 ```
 
-## 45. YOU MUST:
+## 45. IMPLEMENT:
 
-**45.1** FIX THE INTERPRETATION MISTAKES IN PROGRAM  
-**45.2** IMPLEMENT THE "MULTIPLY" FUNCTION
+**45.1** "MULTIPLY" FUNCTION
 ```javascript
-console.log( 33.multiply(2) );  // 66
-console.log( 33.multiply(3) );  // 99
+console.log((33).multiply(2));  // 66
+console.log((33).multiply(3));  // 99
 ```
 
-**45.3** IMPLEMENT THE "DUPLICATION" FUNCTION
+**45.2** "DUPLICATION" FUNCTION
 ```javascript
 console.log('HELLO'.duplication());	// HELLOHELLO
 ```
