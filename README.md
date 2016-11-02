@@ -1087,3 +1087,14 @@ console.log(
 	typeof (true, '1', 1)
 );
 ```
+
+**46.2** [COMMA OPERATOR](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_Operator)  
+```javascript
+(function test() {
+	var x, y, z;
+	x = (y = 1, z = 2);
+	
+	console.log(x);
+})();
+```
+
