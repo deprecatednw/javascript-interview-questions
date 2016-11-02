@@ -1068,13 +1068,13 @@ console.log('d4:', d);
 
 ## 45. IMPLEMENT:
 
-**45.1** "MULTIPLY" FUNCTION
+**45.1** "MULTIPLY" FUNCTION. [NUMBER INSTANCES](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Number_instances)  
 ```javascript
 console.log((33).multiply(2));  // 66
 console.log((33).multiply(3));  // 99
 ```
 
-**45.2** "DUPLICATION" FUNCTION
+**45.2** "DUPLICATION" FUNCTION. [STRING INSTANCES](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#String_instances)  
 ```javascript
 console.log('HELLO'.duplication());	// HELLOHELLO
 ```
