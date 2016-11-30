@@ -1066,7 +1066,7 @@ console.log('d4:', d);
 })();
 ```
 
-## 45. IMPLEMENT:
+## 45. YOU NEED TO IMPLEMENT:
 
 **45.1** "MULTIPLY" FUNCTION. [NUMBER INSTANCES](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Number_instances)  
 ```javascript
@@ -1098,3 +1098,20 @@ console.log(
 })();
 ```
 
+## 47. EXPLAIN THE RESULT OF OUTPUT:
+
+**47.1** [NEW OPERATOR](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new#Description)  
+```javascript
+var testObject1 = function () {
+	return new Number(1);
+};
+
+var testObject2 = function () {
+	return Number(2);
+};
+
+console.log(
+	new testObject1 instanceof testObject1,
+	new testObject2 instanceof testObject2
+);
+```
