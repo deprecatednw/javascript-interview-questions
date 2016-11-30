@@ -1140,3 +1140,27 @@ var object2 = testClass1();
 console.log(object1 instanceof testClass1 === object2 instanceof testClass1);       // true
 console.log(object1 instanceof testClass2 === object2 instanceof testClass2);       // true
 ```
+
+## 49. YOU NEED TO IMPLEMENT:
+
+**49.1** [**isPrototypeOf** OPERATOR](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)  
+```javascript
+var testObject1 = {x: 1};
+var testObject2 = <YOUR_CODE_HERE>
+	
+console.log(
+	testObject1.isPrototypeOf(testObject2)              // true
+); 
+```
+
+**49.2** [**isPrototypeOf** OPERATOR](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf)  
+```javascript
+var testClass1 = function () {};
+var testClass2 = function () {};
+
+<YOUR_CODE_HERE>
+
+console.log(
+	testClass1.prototype.isPrototypeOf(new testClass2)  // true 
+);  
+```
