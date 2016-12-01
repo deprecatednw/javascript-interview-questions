@@ -65,14 +65,16 @@
 
 ## 5. EXPLAIN THE RESULT OF OUTPUT:
 
-**5.1** [**Function.prototype**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)  
+**5.1** [**Function**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) & [**Function.prototype**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)  
 ```javascript
 console.log(
+	Function instanceof Function,
 	Function.prototype instanceof Function,
 	Function.prototype.isPrototypeOf(Function),
 	Function === Function.prototype,
 	Function === Function.prototype.constructor,
-	typeof Function.prototype
+	typeof Function.prototype,
+	typeof Function
 )
 ```
 
@@ -98,8 +100,7 @@ console.log(
 	console.log(
 		typeof Object.prototype,
 		typeof String.prototype,
-		typeof RegExp.prototype,
-		typeof Function
+		typeof RegExp.prototype
 	);
 })();
 ```
