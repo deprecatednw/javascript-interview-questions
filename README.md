@@ -506,12 +506,17 @@ var a = [1, 2, 3, 4, 5];
 })();
 ```
 
-### 25. Explain the result of output:
+## 25. EXPLAIN THE RESULT OF OUTPUT:
 
+**25.1** [**Arithmetic** OPERATORS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)  
 ```javascript
 console.log(
+	3+-+2+-+1,
 	016 * 2,
-	0x16 * 2
+	0x16 * 2,
+	0.1 + 0.2,
+	0.1 + 0.2 === 0.3,
+	(0.1 + 0.2) + 0.3 === 0.1 + (0.2 + 0.3)
 );
 ```
 
@@ -539,14 +544,6 @@ console.log(
 	"6" / 2,
 	"A" - "B" + "2",
 	"A" - "B" + 2
-);
-```
-
-```javascript
-console.log(0.1 + 0.2);
-console.log(0.1 + 0.2 === 0.3);
-console.log(
-	(0.1 + 0.2) + 0.3 === 0.1 + (0.2 + 0.3)
 );
 ```
 
