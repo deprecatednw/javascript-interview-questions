@@ -63,7 +63,18 @@
 })();
 ```
 
-### 5. Explain the result of output:
+## 5. EXPLAIN THE RESULT OF OUTPUT:
+
+**5.1** [**Function.prototype**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype)  
+```javascript
+console.log(
+	Function.prototype instanceof Function,
+	Function.prototype.isPrototypeOf(Function),
+	Function === Function.prototype,
+	Function === Function.prototype.constructor,
+	typeof Function.prototype
+)
+```
 
 ```javascript
 (function test() {
@@ -72,7 +83,6 @@
 		Function === Number.constructor,
 		Function === Function.constructor,
 		Function === Window.constructor,
-		Function === Function.prototype.constructor,
 		Object === Object.prototype.constructor,
 		Number === Number.prototype.constructor,
 		Array === Array.prototype.constructor,
@@ -89,7 +99,7 @@
 		typeof Object.prototype,
 		typeof String.prototype,
 		typeof RegExp.prototype,
-		typeof Function.prototype
+		typeof Function
 	);
 })();
 ```
