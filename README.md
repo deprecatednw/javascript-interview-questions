@@ -1076,8 +1076,8 @@ console.log('d4:', d);
 
 **44.4** [FUNCTION EXPRESSION, IIFE (IMMEDIATELY INVOKABLE FUNCTION EXPRESSIONS)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#The_function_expression_(function_expression))
 ```javascript
-console.log(!function foo() {return 0;});       // false
-console.log(!function foo() {return 0;}());     // true
+console.log(!function foo() {return 0;});
+console.log(!function foo() {return 0;}());
 ```
 
 ## 45. YOU NEED TO IMPLEMENT:
