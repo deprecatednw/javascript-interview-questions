@@ -1074,6 +1074,12 @@ console.log('d4:', d);
 })();
 ```
 
+**44.4** [FUNCTION EXPRESSION, IIFE (IMMEDIATELY INVOKABLE FUNCTION EXPRESSIONS)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions#The_function_expression_(function_expression))
+```javascript
+console.log(!function foo() {return 0;});       // false
+console.log(!function foo() {return 0;}());     // true
+```
+
 ## 45. YOU NEED TO IMPLEMENT:
 
 **45.1** "MULTIPLY" FUNCTION. [NUMBER INSTANCES](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#Number_instances)  
