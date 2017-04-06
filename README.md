@@ -1078,6 +1078,14 @@ console.log('d4:', d);
 ```javascript
 console.log(!function foo() {return 0;});
 console.log(!function foo() {return 0;}());
+console.log(-function foo() {return 1;});
+console.log(-function foo() {return 1;}());
+console.log(+function foo() {return 1;});
+console.log(+function foo() {return 1;}());
+console.log(~function foo() {return 1;});
+console.log(~function foo() {return 1;}());
+console.log(void function foo() {return 1;});
+console.log(void function foo() {return 1;}());
 ```
 
 ## 45. YOU NEED TO IMPLEMENT:
