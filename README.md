@@ -1197,3 +1197,11 @@ console.log(
 	Object.create({}) instanceof Object
 );
 ```
+
+**50.2** [**Object.create** METHOD](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+```javascript
+var o = Object.assign(Object.create(null), { a: 1 }, { a: 2 }, { a: 3 });
+for (var i in o) {
+	console.log(o[i]);
+}
+```
