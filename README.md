@@ -1201,6 +1201,8 @@ console.log(
 **50.2** [**Object.create** METHOD](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/create) & [**Object.assign** METHOD](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
 ```javascript
 var o = Object.assign(Object.create(null), { a: 1 }, { a: 2 }, { a: 3 });
+Object.assign(Object.prototype, { f: function() {} });
+
 for (var i in o) {
 	console.log(o[i]);
 }
