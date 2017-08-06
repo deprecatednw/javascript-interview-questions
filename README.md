@@ -1189,7 +1189,7 @@ console.log(
 
 ## 50. EXPLAIN THE RESULT OF OUTPUT:
 
-**50.1** [** Object.create** METHOD](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+**50.1** [**Object.create** METHOD](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
 ```javascript
 console.log(
 	typeof Object.create(null).prototype,
