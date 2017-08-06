@@ -1186,3 +1186,14 @@ console.log(
 	testClass1.prototype.isPrototypeOf(new testClass2)  // true 
 );  
 ```
+
+## 50. EXPLAIN THE RESULT OF OUTPUT:
+
+**50.1** [** Object.create** METHOD](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/create)
+```javascript
+console.log(
+	typeof Object.create(null).prototype,
+	Object.create(null) instanceof Object,
+	Object.create({}) instanceof Object
+);
+```
