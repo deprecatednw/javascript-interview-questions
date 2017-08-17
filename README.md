@@ -1207,3 +1207,29 @@ for (var i in o) {
 	console.log(o[i]);
 }
 ```
+
+## 51. EXPLAIN THE RESULT OF OUTPUT:
+
+**51.1** [**Event Loop**](https://developer.mozilla.org/en/docs/Web/JavaScript/EventLoop)
+```javascript
+// The first tab is followed to http://localhost
+localStorage.setItem('test', 100500);
+location.reload(true);
+localStorage.setItem('test1', 100501);
+
+setTimeout(function () {
+	localStorage.setItem('test2', 100502);
+});
+
+setTimeout(function () {
+	localStorage.setItem('test3', 100503);
+}, 100);
+
+// Then the second tab is followed to http://localhost
+console.log(
+	localStorage.getItem('test'),
+	localStorage.getItem('test1'),
+	localStorage.getItem('test2'),
+	localStorage.getItem('test3'),
+);
+```
