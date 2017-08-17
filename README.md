@@ -1230,6 +1230,6 @@ console.log(
 	localStorage.getItem('test'),
 	localStorage.getItem('test1'),
 	localStorage.getItem('test2'),
-	localStorage.getItem('test3'),
+	localStorage.getItem('test3')
 );
 ```
