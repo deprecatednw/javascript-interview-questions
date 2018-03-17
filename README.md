@@ -868,24 +868,32 @@ console.log(typeof confirm('Do you like JavaScript?'));
 </html>
 ```
 
-### 40. How can we prevent a memory leak?
+### 40. HOW TO PREVENT A MEMORY LEAK?
 
+**40.1** [GLOBAL OBJECTS](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects)
 ```javascript
-var Key = function (key) {
-	this.key = key;
-};
+/** This is a modifiable section **/
+function CacheKey () {
+  this.t = new Array(2000);
+}
 
-var map = new Map();
+var cacheKeys = {},
+    index = 0,
+    cache = new Map();
 
+/** This is not a modifiable section - START **/
 function addToMap() {
-	var currentKey = new Key(100);
-	map.set(currentKey, {});
-	currentKey = null;
+  setTimeout(addToMap);
 
-	setTimeout(addToMap);
+  cacheKeys[index] = new CacheKey();
+  cache.set(cacheKeys[index], 'New value');
+
+  delete cacheKeys[index];
+  index++;
 }
 
 setTimeout(addToMap);
+/** This is not a modifiable section - END **/
 ```
 
 ### 41. Explain the result of output:
